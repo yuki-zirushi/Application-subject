@@ -5,20 +5,24 @@
   <head></head>
   
   <bod>
+    
     <h1>Books</h1>
-    <table>
-      <thead>
-        <tr>
-          <th>Title</th>
-          <th>Body</th>
-          <th colspan="3"></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr></tr>
-      </tbody>
-    </table>
+    
     <h2>New book</h2>
+    <%= form_with model: @book, url: "/books/:id", local:true do |f| %>
+      <div class="field">
+        <label for="book_title">Title</label>
+        <%= f.text_field :title %>
+      </div>
+      <div class="field">
+        <label for="book_body">Body</label>
+        <%= f.text_area :body %>
+      </div>
+      <div class="actions">
+        <%= f.submit "Create Book" %>
+      </div>
+    <% end %>
+    
   </bod>
   
 </html>
