@@ -21,6 +21,9 @@
         <tr>
           <td><%= book.title %></td>
           <td><%= book.body %></td>
+          <td><%= link_to "Show", "/books/:id" %></td>
+          <td><%= link_to "Edit", "/books/:id/edit" %></td>
+          <td><%= link_to "Destroy", "/books/:id" %></td>
         </tr>
         <% end %>
       </tbody>
