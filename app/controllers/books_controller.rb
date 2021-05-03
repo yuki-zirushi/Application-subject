@@ -14,12 +14,20 @@ class BooksController < ApplicationController
   end
   
   def create
+    book = Book.new(book_params)
+    book.save
+    redirect_to "/books/:id"
   end
   
   def update
   end
   
   def destroy
+  end
+  
+  private
+  def book_params
+    params.permit(:title, :body)
   end
   
 end
