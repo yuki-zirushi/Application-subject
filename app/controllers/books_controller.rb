@@ -18,7 +18,9 @@ class BooksController < ApplicationController
   
   def create
     book = Book.new(book_params)
-    book.save
+    if book.save
+      flash[:notice] = "Book was succcessfully created."
+    end
     redirect_to "/books/#{book.id}"
   end
   

@@ -2,6 +2,11 @@
 <html>
   <head></head>
   <body>
+    <p id="notice">
+      <% if flash[:notice] %>
+      <%= flash[:notice] %>
+      <% end %>
+    </p>
     <p>
       <strong>Title:</strong><%= @book.title %>
     </p>

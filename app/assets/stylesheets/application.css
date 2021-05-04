@@ -22,6 +22,10 @@ body {
   color: #333;
 }
 
+#notice {
+  color: green;
+}
+
 p {
   margin: 33px;
 }
