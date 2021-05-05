@@ -30,6 +30,10 @@ p, ol, ul, td{
   margin: 33px;
 }
 
+a {
+  color: #000;
+}
+
 #error_explanation {
   width: 450px;
   border: 2px solid red;
